@@ -1,0 +1,40 @@
+﻿@model tutorial.Models.GeustResponse
+
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>RsvpForm</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <form asp-action="RsvpForm" method="post">
+        <div asp-validation-summary="All"></div>
+        <p>
+            <label asp-for="Name">your name:</label>
+            <input asp-for="Name" />
+        </p>
+        <p>
+            <label asp-for="Email">your email:</label>
+            <input asp-for="Email" />
+        </p>
+        <p>
+            <label> will you attend?</label>
+            <select asp-for="WillAttend">
+                <option value="">choose option</option>
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+        </p>
+        <p>
+            <button type="submit">Submit form</button>
+        </p>
+    </form>
+</body>
+</html>

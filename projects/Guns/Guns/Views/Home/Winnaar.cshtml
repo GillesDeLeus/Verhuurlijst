@@ -1,0 +1,42 @@
+﻿@model Guns.Models.Persoon
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Winnaar</title>
+</head>
+<body>
+    <h1 class="text-center">Scherpschutter!</h1>
+    <form asp-action="Winnaar" method="post">
+        <div asp-validation-summary="All"></div>
+        <p>
+            <label asp-for="voornaam">voornaam:</label>
+            <input asp-for="voornaam" />
+        </p>
+        <p>
+            <label asp-for="achternaam">achternaam:</label>
+            <input asp-for="achternaam" />
+        </p>
+        <p>
+            <label asp-for="Email">emailadres:</label>
+            <input asp-for="Email" />
+        </p>
+        <p>
+            <label asp-for="telefoonnummer">telefoonnummer:</label>
+            <input asp-for="telefoonnummer" />
+        </p>
+        <p>
+            <button type="submit">Versturen</button>
+        </p>
+    </form>
+
+    <form asp-action="Homepage" method="post">
+        <button>Homepage</button>
+    </form>
+</body>
+</html>

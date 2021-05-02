@@ -1,0 +1,34 @@
+﻿@model IEnumerable<tutorial.Models.GeustResponse>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ListResponses</title>
+</head>
+<body>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>name</th>
+                    <th>email</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (tutorial.Models.GeustResponse r in Model) { 
+                    <tr>
+                        <th>@r.Name</th>
+                        <th>@r.Email</th>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

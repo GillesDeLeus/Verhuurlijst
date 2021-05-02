@@ -1,0 +1,34 @@
+﻿@model Guns.Models.Persoon
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Samenvatting</title>
+</head>
+<body>
+    <header>
+        <h1 class="text-center">Samenvattingsscherm</h1>
+    </header>
+    <div class="text-center">
+        <p>voornaam: @Model.voornaam</p>
+        <p>Achternaam: @Model.achternaam</p>
+        <p>Email: @Model.Email</p>
+        <p>Telefoonnummer: @Model.telefoonnummer</p>
+        <p>Datum verstuurd: @ViewBag.Tijd</p>
+        <p></p>
+    </div>
+    <div class="About" name="Over De Auteur">Auteur: Gilles De Leus</div>
+
+
+    <form asp-action="Homepage" method="post">
+        <button>Homepage</button>
+    </form>
+
+
+</body>
+</html>

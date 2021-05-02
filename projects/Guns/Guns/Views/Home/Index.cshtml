@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>@ViewData["Title"] - Guns</title>
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+    </head>
+    <body class="xyz">
+        <div class="text-center title">
+            <h1 class="display-4">Guns Of the Old west</h1>
+        </div>
+        <div class="midpart text-center">
+            <form method="post" asp-action="Schiet">
+                <button class="mainButton round">@ViewBag.randomNumber</button>
+                <p>nog @ViewBag.aantalKogels kogels resterend</p>
+            </form>
+
+        </div>
+    </body>
+</html>
